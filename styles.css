@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    background-color: #657e9ec7;
+    color: #fff;
+    width: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-shrink: 0;
+    align-items: center; /* Center all items in the sidebar */
+    text-align: center; /* Center text within the sidebar */
+}
+
+.logo {
+    margin-bottom: 20px;
+}
+
+.logo img {
+    max-width: 50%;
+    height: auto;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #303942;
+    border-radius: 10px;
+}
+
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 24px;
+    transition: transform 0.1s;
+}
+
+.icono1:hover {
+    transform: scale(1.5);
+    transition: .1s;
+}
+
+.content {
+    position: relative;
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the main content */
+    text-align: center; /* Center text within the main content */
+    background-image: url('./recursos/imagenes/fondo-ninos-wayuu.jpng.jpeg');
+    background-position: center;
+    background-size: cover;
+}
+
+.content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    z-index: 1;
+}
+
+.content section {
+    position: relative;
+    z-index: 2; /* Ensure content is above the overlay */
+    margin-bottom: 20px;
+    max-width: 800px;
+    width: 100%; /* Ensure content is centered with a max-width */
+    background-color: rgba(147, 161, 209, 0.438); /* Light background for better readability */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.content h1, .content h2 {
+    margin-bottom: 10px;
+}
+
+.content p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+}
